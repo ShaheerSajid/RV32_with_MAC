@@ -1,0 +1,11 @@
+cd ../../../e/FPGAs/RV-MAC-Avalon-UART/Software
+cd ../../../e/FPGAs/RV32I-Jtag/Software
+cd ../../../e/FPGAs/RV32I-Simple/Software
+cd ../../../e/FPGAs/RISC-V-master-naqash/RISC-V-master/software
+
+
+cd ../../../e/FPGAs/RISCV-design/Software
+
+
+./compile_script.sh
+./upload_script.sh

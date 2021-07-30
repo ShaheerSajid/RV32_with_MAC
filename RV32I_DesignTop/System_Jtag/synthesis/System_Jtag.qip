@@ -1,0 +1,45 @@
+set_global_assignment -entity "System_Jtag" -library "System_Jtag" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "System_Jtag" -library "System_Jtag" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "System_Jtag" -library "System_Jtag" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "System_Jtag" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../System_Jtag.sopcinfo"]
+set_instance_assignment -entity "System_Jtag" -library "System_Jtag" -name SLD_INFO "QSYS_NAME System_Jtag HAS_SOPCINFO 1 GENERATION_ID 1627465532"
+set_global_assignment -library "System_Jtag" -name MISC_FILE [file join $::quartus(qip_path) "../../System_Jtag.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "System_Jtag" -name MISC_FILE [file join $::quartus(qip_path) "../../System_Jtag.qsys"]
+
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "System_Jtag.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "System_Jtag" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "System_Jtag" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "System_Jtag" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/System_Jtag_jtag_uart_0.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ALU.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/BRANCH_COMP.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/CONTROL_UNIT.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DATA_MEM.v"]
+set_global_assignment -library "System_Jtag" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/dmem.hex"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/Forwarding.v"]
+set_global_assignment -library "System_Jtag" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/imem.hex"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/IMM_GEN.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/INSTRUCTION_MEM.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MAC_UNIT.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/MUX2X1.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/PCSel_compute.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/PIPES.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/PROGRAM_COUNTER.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/REG_FILE.v"]
+set_global_assignment -library "System_Jtag" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/RISC_V.v"]
+
+set_global_assignment -entity "altera_reset_controller" -library "System_Jtag" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "System_Jtag" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "System_Jtag" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "System_Jtag" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "System_Jtag" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "System_Jtag" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "System_Jtag" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "System_Jtag" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_translator" -library "System_Jtag" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "System_Jtag_jtag_uart_0" -library "System_Jtag" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "System_Jtag_jtag_uart_0" -library "System_Jtag" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "System_Jtag_jtag_uart_0" -library "System_Jtag" -name IP_TOOL_ENV "Qsys"

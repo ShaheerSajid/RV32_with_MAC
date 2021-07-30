@@ -1,0 +1,132 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/ --output-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ --file-set=SIM_VERILOG --report-file=sopcinfo:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.sopcinfo --report-file=html:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.html --report-file=sip:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/System_Jtag.sip --report-file=csv:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.csv --report-file=spd:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.spd --report-file=cmp:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.qsys
+Progress: Loading RV32I_DesignTop/System_Jtag.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding RISCV_CORE_0 [RISCV_CORE 1.0]
+Progress: Parameterizing module RISCV_CORE_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_1 [clock_source 13.0]
+Progress: Parameterizing module clk_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: System_Jtag.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
+Info: System_Jtag: Generating System_Jtag "System_Jtag" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 4 modules, 5 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 6 modules, 11 connections
+Info: merlin_domain_transform: After transform: 11 modules, 32 connections
+Info: merlin_router_transform: After transform: 13 modules, 38 connections
+Info: reset_adaptation_transform: After transform: 15 modules, 42 connections
+Info: merlin_network_to_switch_transform: After transform: 18 modules, 48 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 20 modules, 58 connections
+Info: merlin_mm_transform: After transform: 20 modules, 58 connections
+Info: RISCV_CORE_0: "System_Jtag" instantiated RISCV_CORE "RISCV_CORE_0"
+Info: jtag_uart_0: Starting RTL generation for module 'System_Jtag_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=System_Jtag_jtag_uart_0 --dir=C:/Users/AMMAZA~1/AppData/Local/Temp/alt8836_2311355529241404873.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/AMMAZA~1/AppData/Local/Temp/alt8836_2311355529241404873.dir/0002_jtag_uart_0_gen//System_Jtag_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/AMMAZA~1/AppData/Local/Temp/alt8836_2311355529241404873.dir/0002_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'System_Jtag_jtag_uart_0'
+Info: jtag_uart_0: "System_Jtag" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: RISCV_CORE_0_avalon_master_translator: "System_Jtag" instantiated altera_merlin_master_translator "RISCV_CORE_0_avalon_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "System_Jtag" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: RISCV_CORE_0_avalon_master_translator_avalon_universal_master_0_agent: "System_Jtag" instantiated altera_merlin_master_agent "RISCV_CORE_0_avalon_master_translator_avalon_universal_master_0_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent: "System_Jtag" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo: "System_Jtag" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "System_Jtag" instantiated altera_merlin_router "addr_router"
+Info: id_router: "System_Jtag" instantiated altera_merlin_router "id_router"
+Info: rst_controller: "System_Jtag" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "System_Jtag" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: crosser: "System_Jtag" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: System_Jtag: Done System_Jtag" with 13 modules, 41 files, 383520 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.spd --output-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/
+Info: Doing: ip-make-simscript --spd=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.spd --output-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	12 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERAPRO simulator in E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/ --output-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/ --report-file=bsf:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.qsys
+Progress: Loading RV32I_DesignTop/System_Jtag.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding RISCV_CORE_0 [RISCV_CORE 1.0]
+Progress: Parameterizing module RISCV_CORE_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_1 [clock_source 13.0]
+Progress: Parameterizing module clk_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: System_Jtag.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/ --output-directory=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.sopcinfo --report-file=html:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.html --report-file=qip:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag/synthesis/System_Jtag.qip --report-file=cmp:E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/FPGAs/RISCV-design-DE1-copy/RV32I_DesignTop/System_Jtag.qsys --language=VERILOG
+Progress: Loading RV32I_DesignTop/System_Jtag.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding RISCV_CORE_0 [RISCV_CORE 1.0]
+Progress: Parameterizing module RISCV_CORE_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_1 [clock_source 13.0]
+Progress: Parameterizing module clk_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: System_Jtag.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
+Info: System_Jtag: Generating System_Jtag "System_Jtag" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 4 modules, 5 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 6 modules, 11 connections
+Info: merlin_domain_transform: After transform: 11 modules, 32 connections
+Info: merlin_router_transform: After transform: 13 modules, 38 connections
+Info: reset_adaptation_transform: After transform: 15 modules, 42 connections
+Info: merlin_network_to_switch_transform: After transform: 18 modules, 48 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 20 modules, 58 connections
+Info: merlin_mm_transform: After transform: 20 modules, 58 connections
+Info: RISCV_CORE_0: "System_Jtag" instantiated RISCV_CORE "RISCV_CORE_0"
+Info: jtag_uart_0: Starting RTL generation for module 'System_Jtag_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=System_Jtag_jtag_uart_0 --dir=C:/Users/AMMAZA~1/AppData/Local/Temp/alt8836_2311355529241404873.dir/0013_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/AMMAZA~1/AppData/Local/Temp/alt8836_2311355529241404873.dir/0013_jtag_uart_0_gen//System_Jtag_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'System_Jtag_jtag_uart_0'
+Info: jtag_uart_0: "System_Jtag" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: RISCV_CORE_0_avalon_master_translator: "System_Jtag" instantiated altera_merlin_master_translator "RISCV_CORE_0_avalon_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "System_Jtag" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: RISCV_CORE_0_avalon_master_translator_avalon_universal_master_0_agent: "System_Jtag" instantiated altera_merlin_master_agent "RISCV_CORE_0_avalon_master_translator_avalon_universal_master_0_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent: "System_Jtag" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo: "System_Jtag" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "System_Jtag" instantiated altera_merlin_router "addr_router"
+Info: id_router: "System_Jtag" instantiated altera_merlin_router "id_router"
+Info: rst_controller: "System_Jtag" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "System_Jtag" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: crosser: "System_Jtag" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: System_Jtag: Done System_Jtag" with 13 modules, 41 files, 383520 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

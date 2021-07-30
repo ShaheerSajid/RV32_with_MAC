@@ -1,0 +1,10 @@
+	component System_Jtag is
+		port (
+			clk_clk                               : in  std_logic                     := 'X';             -- clk
+			reset_reset_n                         : in  std_logic                     := 'X';             -- reset_n
+			riscv_core_0_conduit_end_disp_sel     : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- disp_sel
+			riscv_core_0_conduit_end_display      : out std_logic_vector(31 downto 0);                    -- display
+			riscv_core_0_conduit_end_av_writedata : out std_logic_vector(31 downto 0)                     -- av_writedata
+		);
+	end component System_Jtag;
+

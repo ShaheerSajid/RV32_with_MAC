@@ -1,0 +1,43 @@
+# system info System_Jtag on 2021.07.28.14:45:28
+system_info:
+name,value
+DEVICE,EP2C20F484C7
+DEVICE_FAMILY,Cyclone II
+GENERATION_ID,1627465522
+#
+#
+# Files generated for System_Jtag on 2021.07.28.14:45:28
+files:
+filepath,kind,attributes,module,is_top
+System_Jtag/simulation/System_Jtag.v,VERILOG,,System_Jtag,true
+System_Jtag/simulation/submodules/ALU.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/BRANCH_COMP.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/CONTROL_UNIT.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/DATA_MEM.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/dmem.hex,HEX,,RV32_core,false
+System_Jtag/simulation/submodules/Forwarding.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/imem.hex,HEX,,RV32_core,false
+System_Jtag/simulation/submodules/IMM_GEN.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/INSTRUCTION_MEM.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/MAC_UNIT.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/MUX2X1.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/PCSel_compute.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/PIPES.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/PROGRAM_COUNTER.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/REG_FILE.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/RISC_V.v,VERILOG,,RV32_core,false
+System_Jtag/simulation/submodules/System_Jtag_jtag_uart_0.v,VERILOG,,System_Jtag_jtag_uart_0,false
+System_Jtag/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+System_Jtag/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+System_Jtag/simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+System_Jtag/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+System_Jtag/simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+System_Jtag.RISCV_CORE_0,RV32_core
+System_Jtag.jtag_uart_0,System_Jtag_jtag_uart_0
+System_Jtag.RISCV_CORE_0_avalon_master_translator,altera_merlin_master_translator
+System_Jtag.jtag_uart_0_avalon_jtag_slave_translator,altera_merlin_slave_translator
+System_Jtag.rst_controller,altera_reset_controller
